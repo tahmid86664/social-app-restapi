@@ -30,7 +30,7 @@ const UserSchema = new mongoose.Schema({
     type: Array,
     default: []
   },
-  following: {
+  followings: {
     type: Array,
     default: []
   },
@@ -45,7 +45,7 @@ const UserSchema = new mongoose.Schema({
   city: {
     type: String,
     max: 50
-  },
+  }, 
   from: {
     type: String,
     max: 50
