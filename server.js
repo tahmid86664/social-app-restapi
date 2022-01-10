@@ -19,14 +19,17 @@ const postRoute = require("./routes/posts");
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true
-}, () => {
-  console.log("MongoDB is connected");
-});
-
+mongoose.connect(
+  process.env.MONGO_URL,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  },
+  () => {
+    console.log("MongoDB is connected");
+  }
+);
 
 // middleware
 app.use(express.json());
